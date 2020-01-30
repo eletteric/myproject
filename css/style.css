@@ -1,0 +1,83 @@
+body{font-family: Arial, Helvetica, sans-serif;}
+#cardFrame {
+    height: 60vw;
+    width: 40vw;
+    border: 1px solid #000;
+    border-radius: 2vw 2vw 2vw 0vw;
+    position: relative;
+    background-color: #000;
+    text-align: center;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    transform-style: preserve-3d;
+  /*  transition: all 1.0s linear;*/
+}
+
+.responsive {
+    width: auto;
+    max-width: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+ul{color:white; margin:0; padding:0; text-align: center;}
+li{ margin:0; margin-bottom:1vw;padding:0; font-size: 2vw;}
+
+i.fa{margin-right: 1vw;}
+.fa-ul{margin-left:0}
+a{color:yellow}
+
+.myname{text-align: center; color:white; font-size: 2vw; padding: 0%; margin: 0%;}
+#gradientbg{ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#deea00+0,494f00+37,000000+63,000000+100 */
+    background: #deea00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #deea00 0%, #494f00 37%, #000000 63%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #deea00 0%,#494f00 37%,#000000 63%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #deea00 0%,#494f00 37%,#000000 63%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deea00', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    overflow: hidden;
+    border-radius: 2vw 2vw 2vw 0vw;
+    padding:2vw 2vw 2vw 2vw;
+ }
+
+ .containerLeft, .containerRight {text-align: left;display: inline-block; float:left}
+ h1, p.copy{text-transform: uppercase; color:#fff;}
+ .containerLeft{width:23%; padding: 0% 2% 0% 0%;
+ }
+ .containerRight{width:75%;}
+ h1{font-size: 2.5vw; line-height: 1vw;}
+ p.copy{font-size: 1.5vw; line-height: 1vw;}
+
+ @media only screen and (max-width: 600px) {
+    .containerLeft{width:90%; padding: 0% 5% 0% 5%;
+    }
+    .containerRight{visibility: hidden;
+  }
+
+  #cardWrapper:hover #cardFrame {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+  }
+  
+  #cardWrapper {
+    position: relative;
+    margin: 10px auto;
+    width: 450px;
+    height: 281px;
+    z-index: 1;
+  }
+  #cardWrapper {
+    perspective: 1000;
+  }
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #aaa;
+  }
